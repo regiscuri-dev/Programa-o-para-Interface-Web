@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrega III — Interatividade e Funcionalidades</title>
+  <meta name="description" content="SPA básica com templates JS, roteador por hash e validação de formulários com verificação de consistência." />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#/home" aria-label="Ir para a página inicial">WebInterfaces</a>
+    <nav aria-label="Principal">
+      <a href="#/home" data-link>Home</a>
+      <a href="#/catalogo" data-link>Catálogo</a>
+      <a href="#/formulario" data-link>Formulário</a>
+      <button id="themeToggle" class="btn small" aria-pressed="false" aria-label="Alternar tema">🌓</button>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1" aria-live="polite" aria-busy="false"></main>
+
+  <footer class="site-footer">
+    <small>Entrega III – Interatividade e Funcionalidades • SPA + Templates + Validação • 2025</small>
+  </footer>
+
+  <script type="module">
+    import { startRouter } from './assets/js/router.js';
+    import { initTheme } from './assets/js/theme.js';
+
+    // Inicializações
+    initTheme();
+    startRouter();
+  </script>
+</body>
+</html>
